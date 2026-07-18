@@ -1,4 +1,4 @@
-# elizaos-plugin-nodeflare
+# plugin-nodeflare
 
 Read on-chain data and **agent-intelligence** across **23 EVM chains** from your ElizaOS agent —
 including young chains (**Robinhood, Plasma, Ink, Zircuit**) the big indexers skip. Powered by
@@ -17,14 +17,14 @@ check approvals, pre-flight a transaction — in one call, over chains other too
 ## Install
 
 ```bash
-npm install elizaos-plugin-nodeflare
-# or:  elizaos plugins add elizaos-plugin-nodeflare
+npm install plugin-nodeflare
+# or:  elizaos plugins add plugin-nodeflare
 ```
 
 Add it to your character/agent:
 
 ```ts
-import { nodeflarePlugin } from "elizaos-plugin-nodeflare";
+import { nodeflarePlugin } from "plugin-nodeflare";
 
 export const character = {
   name: "MyAgent",
