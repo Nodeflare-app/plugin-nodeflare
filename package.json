@@ -1,0 +1,54 @@
+{
+  "name": "elizaos-plugin-nodeflare",
+  "version": "0.1.0",
+  "description": "ElizaOS plugin for NodeFlare — read on-chain data & agent-intelligence (balances, portfolio, token approvals, tx simulation, wallet reports, token safety) across 23 EVM chains, including young chains (Robinhood, Plasma, Ink, Zircuit) the big indexers skip. Read-only, no wallet or private key required.",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "elizaos", "elizaos-plugins", "eliza", "plugin", "ai-agents", "agent",
+    "rpc", "ethereum", "evm", "blockchain", "web3", "onchain", "defi",
+    "token-safety", "wallet", "portfolio", "nodeflare",
+    "robinhood", "plasma", "ink", "zircuit"
+  ],
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "NODEFLARE_API_KEY": {
+        "type": "string",
+        "required": false,
+        "sensitive": true,
+        "description": "Optional NodeFlare API key (nf_live_…). Without it the plugin uses the free public tier; with it you get higher rate limits and heavy methods (token discovery, deep token-safety checks, full approvals scans). Get one free at https://nodeflare.app/sign-up"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nodeflare-app/elizaos-plugin-nodeflare.git"
+  },
+  "homepage": "https://nodeflare.app/agents",
+  "bugs": { "url": "https://github.com/Nodeflare-app/elizaos-plugin-nodeflare/issues" },
+  "peerDependencies": {
+    "@elizaos/core": "^1.7.0"
+  },
+  "dependencies": {
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@elizaos/core": "^1.7.2",
+    "@types/node": "^22.13.4",
+    "tsup": "^8.5.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.9"
+  }
+}
