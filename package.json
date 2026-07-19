@@ -1,6 +1,7 @@
 {
   "name": "plugin-nodeflare",
   "version": "0.1.0",
+  "author": "NodeFlare <info@nodeflare.app> (https://nodeflare.app)",
   "description": "ElizaOS plugin for NodeFlare — read on-chain data & agent-intelligence (balances, portfolio, token approvals, tx simulation, wallet reports, token safety) across 23 EVM chains, including young chains (Robinhood, Plasma, Ink, Zircuit) the big indexers skip. Read-only, no wallet or private key required.",
   "license": "MIT",
   "type": "module",
@@ -16,10 +17,29 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "elizaos", "elizaos-plugins", "eliza", "plugin", "ai-agents", "agent",
-    "rpc", "ethereum", "evm", "blockchain", "web3", "onchain", "defi",
-    "token-safety", "wallet", "portfolio", "nodeflare",
-    "robinhood", "plasma", "ink", "zircuit"
+    "elizaos",
+    "elizaos-plugin",
+    "elizaos-plugins",
+    "eliza",
+    "plugin",
+    "ai-agents",
+    "agent",
+    "rpc",
+    "ethereum",
+    "evm",
+    "blockchain",
+    "web3",
+    "onchain",
+    "defi",
+    "token-safety",
+    "wallet",
+    "portfolio",
+    "multichain",
+    "nodeflare",
+    "robinhood",
+    "plasma",
+    "ink",
+    "zircuit"
   ],
   "agentConfig": {
     "pluginType": "elizaos:plugin:1.0.0",
