@@ -1,6 +1,6 @@
 {
   "name": "plugin-nodeflare",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "NodeFlare <info@nodeflare.app> (https://nodeflare.app)",
   "description": "ElizaOS plugin for NodeFlare — read on-chain data & agent-intelligence (balances, portfolio, token approvals, tx simulation, wallet reports, token safety) across 23 EVM chains, including young chains (Robinhood, Plasma, Ink, Zircuit) the big indexers skip. Read-only, no wallet or private key required.",
   "license": "MIT",

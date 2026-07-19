@@ -3,6 +3,9 @@
 // heavy data methods (Authorization: Bearer on /data/*).
 const GATEWAY = "https://rpc.nodeflare.app";
 const TIMEOUT_MS = 12_000;
+// Distinct UA so the gateway edge — which blocks empty / bare-"node" (undici
+// default) User-Agents on the public tier as bot noise — keeps our keyless calls.
+const UA = "plugin-nodeflare/0.1.2";
 
 export interface JsonRpcCall {
   to: string;
@@ -19,7 +22,7 @@ async function postJson(url: string, body: unknown, headers: Record<string, stri
   try {
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json", ...headers },
+      headers: { "User-Agent": UA, "Content-Type": "application/json", ...headers },
       body: JSON.stringify(body),
       signal: ctrl.signal,
     });
